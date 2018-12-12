@@ -13,7 +13,7 @@ install:
     - source /opt/qt5*/bin/qt5*-env.sh
 
 script:
-  - "wget http://ftp.icm.edu.pl/pub/unix/graphics/GraphicsMagick/1.3/GraphicsMagick-1.3.31.tar.xz && tar -xf GraphicsMagick-*.tar.gz && cd GraphicsMagick-*/"
+  - "wget http://ftp.icm.edu.pl/pub/unix/graphics/GraphicsMagick/1.3/GraphicsMagick-1.3.31.tar.xz && tar -xf GraphicsMagick-*.tar.xz && cd GraphicsMagick-*/"
   - "./configure --prefix=/usr --enable-shared && make -j && sudo make install"
   - qmake CONFIG+=release PREFIX=/usr
   - make -j$(nproc)
