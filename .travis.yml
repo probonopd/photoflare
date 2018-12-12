@@ -14,7 +14,7 @@ install:
 
 script:
   - "wget http://ftp.icm.edu.pl/pub/unix/graphics/GraphicsMagick/1.3/GraphicsMagick-1.3.31.tar.xz && tar -xf GraphicsMagick-*.tar.xz && cd GraphicsMagick-*/"
-  - "./configure --prefix=/usr --enable-shared && make -j && sudo make install"
+  - "./configure --prefix=/usr --enable-shared && make -j && sudo make install" && cd ..
   - qmake CONFIG+=release PREFIX=/usr
   - make -j$(nproc)
   - make INSTALL_ROOT=appdir -j$(nproc) install ; find appdir/
