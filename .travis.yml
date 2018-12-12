@@ -18,7 +18,7 @@ script:
   - cd GraphicsMagick-*/
   - ./configure --prefix=/usr --enable-shared
   - make -j$(nproc)
-  - sudo make install"
+  - sudo make install
   - cd ..
   - qmake CONFIG+=release PREFIX=/usr
   - make -j$(nproc)
